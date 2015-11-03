@@ -10,6 +10,25 @@
   				{{product.name}}
   				<em class="pull-right">{{$product.price | currency}}
   			</h3>
+    </ul>
+    <ul class="nav nav-pills">
+      <li>
+        <div class="panel" ng-show="tab === 1">
+          <h4>Description</h4>
+          <p> {{product.description}} </p>
+        </div>
+      </li>
+      <li>
+        <div class="panel" ng-show"tab === 2">
+          <h4> Specifications </h4>
+          <blockquote> None yet </blockquote>
+        </div>
+      </li>
+      <li>
+        <div class="panel" ng-show="tab === 3"> 
+          <h4> Reviews </h4>
+          <blockquote> None yet </blockquote>
+        </div>
   		</li>
   	</ul>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
