@@ -21,7 +21,23 @@
       <li>
         <div class="panel" ng-show"tab === 2">
           <h4> Specifications </h4>
-          <blockquote> None yet </blockquote>
+
+          <form name="reviewForm">
+            <blockquote ng-repeat="review in product.reviews">
+              <b> Stars: {{review.stars}} </b>
+              <cite> by: {{review.author}}
+              </cite> 
+            </blockquote>
+            <select ng-model="review.stars">
+              <option value="1"> 1 stars </option>
+              <option value="2"> 2 stars </option>
+            </select>
+            <textarea ng-model="review.body"></textarea>
+            <label></label>
+            <input ng-model="review.author"type="email"/>
+            <input type="submit" value="Submit"/>
+
+          </form>
         </div>
       </li>
       <li>
