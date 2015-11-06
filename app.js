@@ -19,4 +19,14 @@
 		canPurchase: false
 	}
 	]
+
+	app.controller("ReviewController", function() {
+		this.review = {};
+
+		this.AddReview = function(product)
+		{
+			product.reviews.push(this.review)
+		}
+	});
+	
 })()
