@@ -28,5 +28,23 @@
 			product.reviews.push(this.review)
 		}
 	});
+
+	// these are best used for UI widgets etc.
+
+	app.directive('productTitle', function() {
+		return {
+			restrict: 'E', 
+			templateUrl: 'product-title.html'
+		}
+	});
+
+
+// this is an attribute ex. 
+	app.directive('productTitle' function() {
+		return {
+			restrict: 'A', 
+			templateUrl: 'product-title.html'
+		}
+	})
 	
 })()
